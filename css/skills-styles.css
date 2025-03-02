@@ -1,0 +1,477 @@
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0 0 10px red);
+    }
+
+    25% {
+        filter: drop-shadow(0 0 15px orange);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px yellow);
+    }
+
+    75% {
+        filter: drop-shadow(0 0 15px blue);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 10px purple);
+    }
+}
+
+/* Animación de vórtice */
+.vortex-out {
+    transform: scale(0) rotate(720deg);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+
+/* 🔹 Lista de habilidades */
+.skills-list {
+    list-style: none;
+    /* Quita los estilos de lista */
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 18px;
+    /* Tamaño del texto */
+    margin: 10px 0;
+    /* Espaciado entre elementos de la lista */
+    display: flex;
+    align-items: center;
+}
+
+.skills-list li i {
+    margin-right: 10px;
+    /* Espacio entre el icono y el texto */
+    color: #007BFF;
+    /* Color azul */
+}
+
+/* 🔹 Contenedor flexible de habilidades */
+.skills-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+    position: relative;
+    overflow: visible;
+    min-height: auto;
+}
+
+/* 🔹 Asegura que los títulos no sean tapados por imágenes */
+h2 {
+    position: relative;
+    z-index: 10;
+    color: #080808;
+    background-color: transparent;
+    padding: 10px;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgb(1, 1, 1));
+    /* 🔹 Efecto de iluminación en morado */
+}
+
+/* 🔹 Estilo de cada tarjeta de habilidad */
+.skill-item {
+    background-color: #f0f0f05d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, margin-bottom 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+/* 🔹 Efecto al pasar el mouse: agranda y cambia el fondo */
+.skill-item:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    margin-bottom: 70px;
+    background-color: #d9d9d9;
+    z-index: 5;
+    animation: glow 1.5s infinite alternate;
+    /* 🔹 Cambia de color constantemente */
+}
+
+/* 🔹 Icono dentro de cada tarjeta */
+.skill-icon {
+    width: 140px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.4);
+    /* 🔹 Ahora crece un 40% más */
+    margin-bottom: 10px;
+}
+
+/* 🔹 Nombre de la habilidad */
+.skill-name {
+    background-color: #007BFF;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.skill-name2 {
+    background-color: #a6abebc3;
+    color: white;
+    padding: 1px 5px; /* Menos padding para que sea más compacto */
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px; /* Reduce el tamaño del texto */
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 10px auto 1.2rem; /* Lo centra horizontalmente */
+    width: fit-content; /* Ajusta el tamaño al contenido */
+    text-align: center; /* Centra el texto dentro */
+    animation: glow 1.5s infinite alternate;
+}
+
+
+.skill-item:hover .skill-name {
+    transform: translateY(15px);
+    background-color: #0056b3;
+    animation: glow 1.5s infinite alternate;
+    /* 🔹 Cambia de color constantemente */
+}
+
+/* 🔹 Botones de acción */
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* 🔹 Carrusel de imágenes */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+.carousel-icon {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.carousel-name {
+    background-color: #007BFF;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/* 🔹 Contenedor de imágenes de habilidades con separación */
+.skill-item .skill-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    /* Espacio entre imágenes */
+    padding-top: 15px;
+    /* Evita que las imágenes toquen el título */
+}
+
+/* 🔹 Ajuste del icono en skill-item */
+.skill-item img {
+    width: 40px;
+    /* Tamaño inicial */
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+    /* Espaciado entre imágenes */
+    transition: transform 0.3s ease, margin 0.3s ease;
+}
+
+/* 🔹 Efecto al pasar el mouse: agranda un 40% más */
+.skill-item img:hover {
+    transform: scale(1.4);
+    /* 🔹 Ahora crece un 40% más */
+    margin: 20px;
+    /* Mantiene separación al agrandarse */
+    animation: glow 1.5s infinite alternate;
+    /* 🔹 Cambia de color constantemente */
+}
+
+/* 🔹 Asegura que las imágenes no sobrepasen el cuadro azul */
+.skill-item:hover .skill-images {
+    padding-top: 25px;
+    /* Empuja las imágenes hacia abajo */
+
+}
+
+
+#rpa-icon {
+    width: 180px;
+    /* O el tamaño que prefieras */
+    height: auto;
+}
+
+#net-icon {
+    width: 80px;
+    /* O el tamaño que prefieras */
+    height: auto;
+}
+
+.slide-in.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills-section .skills-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    /* Espaciado entre columnas */
+    margin-top: 20px;
+    /* Ajusta según sea necesario */
+}
+
+.skills-section .skills-block {
+    width: 400px;
+    /* Ancho fijo solo para estas columnas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #114b7b1f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Aplica estilos solo a la navegación dentro de .custom-navbar */
+.custom-navbar .navbar {
+    font-family: 'Poppins', sans-serif;
+    /* Usa la fuente de Google Fonts */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cambia el color del texto y el efecto hover */
+.custom-navbar .nav-link {
+    font-weight: 600;
+    color: white !important;
+    transition: 0.3s;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffd700 !important;
+    /* Color dorado al pasar el mouse */
+}
+
+
+h3 {
+    position: relative;
+    z-index: 10;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 0px;
+    display: inline-block;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    /* 🔹 Efecto de iluminación en morado */
+}
+
+.skills-page {
+    background-image: url('../assets/images/Fondos/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #114b7b;
+    color: #fff;
+    text-align: center;
+}
+
+/* Contenedor */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+/* Encabezado */
+header {
+    background: rgba(0, 0, 0, 0.627);
+    padding: 10px 0;
+    text-align: center;
+    animation: slideDown 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 600;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Navegación */
+nav {
+    background: rgba(0, 0, 0, 0.651);
+    padding: 5px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 0px px;
+    transition: 0.3s;
+    border-radius: 0px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* Sección de inicio */
+#home {
+    padding: 60px 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#home h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 1.2em;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ed9f29;
+    color: #010101;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: 0.3s;
+    
+}
+
+.btn:hover {
+    background: #e68900;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Pie de página */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.profile img {
+    width: 200px;
+    /* Ajusta el ancho según necesites */
+    height: auto;
+    /* Mantiene la proporción */
+    border-radius: 50%;
+    /* Si quieres mantenerlo en forma circular */
+}
+

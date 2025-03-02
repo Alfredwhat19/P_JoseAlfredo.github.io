@@ -1,0 +1,156 @@
+@keyframes glow {
+    0% { filter: drop-shadow(0 0 10px red); }
+    25% { filter: drop-shadow(0 0 15px orange); }
+    50% { filter: drop-shadow(0 0 20px yellow); }
+    75% { filter: drop-shadow(0 0 15px blue); }
+    100% { filter: drop-shadow(0 0 10px purple); }
+}
+
+/* Animación de vórtice */
+.vortex-out {
+    transform: scale(0) rotate(720deg);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #2627285c;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a.btn2 {
+    background-color: #e68a00d0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+nav a.btn2:hover {
+    background: #e68900;
+    animation: glow 1.5s infinite alternate;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.languages {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.languages h3 {
+    background: #007BFF;
+    color: rgb(6, 6, 6);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.languages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.languages ul li {
+    background: #0a0a0a;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.projects {
+    flex: 2;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-item {
+    background: #020202;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
+
+/* Estilos para las imágenes en los proyectos */
+.project-item img {
+    max-width: 100px; /* Tamaño base de las imágenes */
+    height: auto; /* Mantiene la proporción */
+    margin: 5px; /* Espaciado entre imágenes */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre imágenes */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos para el contenedor de imágenes */
+.image-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para las imágenes */
+.image-container img {
+    width: 100px; /* Tamaño inicial */
+    height: auto;
+    transition: transform 0.3s ease; /* Animación suave */
+    cursor: pointer;
+    user-select: none; /* Evitar selección de texto */
+}
+
+/* Efecto de agrandamiento al pasar el cursor */
+.image-container img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño en un 20% */
+    animation: glow 1.5s infinite alternate;
+}
