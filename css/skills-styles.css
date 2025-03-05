@@ -323,11 +323,12 @@ h3 {
 }
 
 .skills-page {
-    background-image: url('../assets/images/Fondos/fondo2.jpg');
+    background-color: #D2691E; /* Café naranja */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
+
 
 
 /* Estilos generales */
